@@ -42,3 +42,32 @@
  - Скриншот вывода curl -k
    ##### ОТВЕТ:
    <img width="675" height="203" alt="image" src="https://github.com/user-attachments/assets/9efa5355-64bf-483e-a4db-e37e0a7aaa0f" />
+
+## Задание 3: Настройка RBAC
+### Задача
+Создать пользователя с ограниченными правами (только просмотр логов и описания подов).
+
+### Шаги выполнения
+ - Включите RBAC в microk8s
+    - microk8s enable rbac
+ - Создать SSL-сертификат для пользователя
+    - openssl genrsa -out developer.key 2048
+    - openssl req -new -key developer.key -out developer.csr -subj "/CN={ИМЯ ПОЛЬЗОВАТЕЛЯ}"
+    - openssl x509 -req -in developer.csr -CA {CA серт вашего кластера} -CAkey {CA ключ вашего кластера} -CAcreateserial -out developer.crt -days 365
+ - Создать Role (только просмотр логов и описания подов) и RoleBinding
+ - Проверить доступ
+#### Что сдать на проверку
+ - Манифесты:
+    - role-pod-reader.yaml
+      ##### ОТВЕТ:
+      <img width="819" height="427" alt="image" src="https://github.com/user-attachments/assets/0d287a52-061f-46bf-9975-2194755566dd" />
+
+    - rolebinding-developer.yaml
+      ##### ОТВЕТ:
+      <img width="825" height="377" alt="image" src="https://github.com/user-attachments/assets/564d66d7-ba54-45b4-b592-2d69041e7b8d" />
+
+ - Команды генерации сертификатов
+    ##### ОТВЕТ:
+   <img width="685" height="347" alt="image" src="https://github.com/user-attachments/assets/fca25b6d-6310-464a-87e1-135c42c010ea" />
+
+ - Скриншот проверки прав (kubectl get pods --as=developer)
