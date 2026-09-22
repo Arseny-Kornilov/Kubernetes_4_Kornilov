@@ -21,4 +21,5 @@
 
 - Скриншот вывода curl или браузера
 ##### ОТВЕТ:
-<img width="1279" height="523" alt="image" src="https://github.com/user-attachments/assets/c1ce75df-6e5d-4e78-8e59-45f3d1bdf1ca" />
+<img width="525" height="241" alt="image" src="https://github.com/user-attachments/assets/2e968fa0-39e6-40f7-80ef-77cb663969cd" />
+
