@@ -71,3 +71,4 @@
    <img width="685" height="347" alt="image" src="https://github.com/user-attachments/assets/fca25b6d-6310-464a-87e1-135c42c010ea" />
 
  - Скриншот проверки прав (kubectl get pods --as=developer)
+   <img width="668" height="253" alt="image" src="https://github.com/user-attachments/assets/5e4e226f-3818-4d6f-a113-8ade030ebe18" />
